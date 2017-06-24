@@ -1,5 +1,8 @@
 // Make connection
-var socket = io.connect('http://localhost:4000');  // io is a global object included with socket.io
+//var socket = io.connect('http://localhost:4000');  // io is a global object included with socket.io
+
+// Notice that I’m not specifying any URL when I call io(), since it defaults to trying to connect to the host that serves the page.
+var socket = io();
 
 // Query DOM
 var output = document.querySelector('#output');
